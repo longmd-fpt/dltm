@@ -155,6 +155,9 @@ textarea.colorful:-ms-input-placeholder {
     }
 }
 
+.highlight {
+    color: @hover-color !important;
+}
 
 /* container */
 
@@ -559,6 +562,10 @@ section {
         &.default {
             color: @main-color !important;
         } 
+      
+        .badge {
+            vertical-align: 3px;
+        }
     }
 }
 
@@ -1119,6 +1126,21 @@ section {
 
     iframe {
         margin-top: 0.6em;
+    }
+  
+    .welcome-line {
+        .btn {
+            background: @hover-color;
+            color: white;
+            border-radius: 50px;
+            min-width: 60px;
+            vertical-align: 1px;
+          
+            &:hover {
+                opacity: .8;
+                cursor: pointer;
+            }
+        }
     }
 }
 
