@@ -813,11 +813,31 @@ section {
         padding: 0;
       
         .event {
+            position: relative;
             margin-bottom: 30px;
+            background: @gray-color;
+          
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 15px;
+                background: white;
+            }
+          
+            &:before {
+              left: 0;
+            }
+          
+            &:after {
+              right: 0;
+            }
           
             .event-desc {
                 padding: 1.1em;
-                background: @gray-color;
+                
                 .event-title {
                     font-weight: 600;
                     text-transform: uppercase;
@@ -854,6 +874,7 @@ section {
                 font-weight: 100;
                 border-radius: 0;
                 padding: 0.6em; 
+                background: white;
                 color: @hover-color;
                 border-color: @hover-color;
               
@@ -976,6 +997,7 @@ section {
                     color: @text-light;
                     white-space: nowrap;
                     text-overflow: ellipsis;
+                    overflow: hidden;
                     & + p {
                         margin-top: 0.1em;
                     }
@@ -1174,3 +1196,68 @@ section {
     border-radius: 0.25rem !important;
   }
 }
+
+/* fixed by a line */
+.wrap-1-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* tour details */
+.tour-short-desc {
+  p {
+    font-size: 1.1em;
+    
+    * {
+      vertical-align: 0;
+    }
+  }
+  
+  p + p {
+    margin-top: 1em;
+    
+    .highlight {
+      font-size: 1.3em;
+    }
+  }
+  
+  .lores({
+    margin-top: 1.5em;
+    
+    p + p {
+      margin-top: 0;
+    }
+  });
+}
+
+.tour-plan {
+  dt {
+    a {
+      position: relative;
+      display: block;
+      padding: 3px 12px 2px 3px;
+      font-weight: normal;
+      border: solid 1px @hover-color;
+      border-radius: 50px;
+      
+      &:before {
+        content: attr(data-date);
+        background: @hover-color;
+        color: white;
+        margin-right: 6px;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: .9em;
+        text-transform: uppercase;
+        vertical-align: 1px;
+      }
+      
+      .lores({
+        padding: 5px 12px 5px 3px;
+      });
+    }
+  }
+}
+
+
