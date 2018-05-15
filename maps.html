@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Địa điểm nổi tiếng</title>
+<link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32"> 
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<script src="assets/resources/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="top-info">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-6">
+            <a href="mailto:khonggiandibo@gmail.com"><i class="fa fa-envelope-o"></i><span>khonggiandibo@gmail.com</span></a>
+            <a href="tel:090876586"><i class="fa fa-phone"></i><span>+84 090876586</span></a>
+            <a href="#" class="highlight"><i class="fa fa-qrcode"></i><span>QR Code</span></a>
+          </div>
+          <div class="col-6 text-right">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-globe"></i>Tiếng Việt</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo-white.png" alt="" class="d-inline-block align-top">
+          <img src="assets/img/logo.png" alt="" class="d-inline-block align-top fixed-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Di tích</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="action-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hoạt động</a>
+              <div class="dropdown-menu" aria-labelledby="action-dropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sự kiện</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="service-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch vụ</a>
+              <div class="dropdown-menu" aria-labelledby="service-dropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tiện ích</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+   
+  <section class="img-banner" id="banner">
+    <div class="container">
+    </div>
+  </section>
+
+  <section class="map-target">
+    <div class="container">
+    <ul class="targets-tab row paralax-part">
+      <li class="col-lg-2 col-md-4 animate" data-animate="bounceIn"> <a href="#history" id="map-history" data-api="api/map-history.json" data-method="GET">Địa danh</a> </li>
+      <li class="col-lg-2 col-md-4 animate" data-animate="bounceIn"> <a href="#hotel" id="map-hotel" data-api="api/map-hotel.json" data-method="GET">Khách sạn</a> </li>
+      <li class="col-lg-2 col-md-4 animate" data-animate="bounceIn"> <a href="#food" id="map-food" data-api="api/map-food.json" data-method="GET">Ăn uống</a> </li>
+      <li class="col-lg-2 col-md-4 animate" data-animate="bounceIn"> <a href="#gift" id="map-gift" data-api="api/map-gift.json" data-method="GET">Lưu niệm</a> </li>
+      <li class="col-lg-2 col-md-4 animate" data-animate="bounceIn"> <a href="#wifi" id="map-wifi" data-api="api/map-wifi.json" data-method="GET">Wifi free</a> </li>
+      <li class="col-lg-2 col-md-4 animate" data-animate="bounceIn"> <a href="#atm" id="map-atm" data-api="api/map-atm.json" data-method="GET">Máy ATM</a> </li>
+    </ul>
+    </div>
+    <div id="map" data-lat="21.0287797" data-lng="105.850176" data-zoom="16" data-pin-url="assets/img/pin.png"></div>
+  </section>
+  
+  <section class="detail-sect">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">Trang chủ</a>
+        <span class="breadcrumb-item active">Bản đồ</span>
+      </nav>
+      <div class="row">
+        <h1 class="default col-12">Địa danh nổi tiếng</h1>
+        
+        <div class="hot-locations row">
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-01.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Công viên Hạ Long</strong></h5>
+              <p class="card-text wrap-1-line">132 Trần Hưng Đạo, Hạ Long, Quãng Ninh.</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+                <a href="#">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-02.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Đảo Quan Lạn</strong></h5>
+              <p class="card-text wrap-1-line">Thị trấn Vân Đồn, Quảng Ninh</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-03.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Bãi Vân Đồn</strong></h5>
+              <p class="card-text wrap-1-line">Thị trấn Vân Đồn, Quảng Ninh</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-01.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Vịnh Hạ Long</strong></h5>
+              <p class="card-text wrap-1-line">Thành phố Hạ Long, Quảng Ninh</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-01.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Công viên Hạ Long</strong></h5>
+              <p class="card-text wrap-1-line">132 Trần Hưng Đạo, Hạ Long, Quãng Ninh.</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-02.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Đảo Quan Lạn</strong></h5>
+              <p class="card-text wrap-1-line">Thị trấn Vân Đồn, Quảng Ninh</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-03.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Bãi Vân Đồn</strong></h5>
+              <p class="card-text wrap-1-line">Thị trấn Vân Đồn, Quảng Ninh</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-12">
+            <img class="card-img-top" src="img/img-service-01.png" alt="...">
+            <div class="card-body">
+              <h5 class="card-title wrap-1-line"><span class="highlight">Địa Danh</span> - <strong>Vịnh Hạ Long</strong></h5>
+              <p class="card-text wrap-1-line">Thành phố Hạ Long, Quảng Ninh</p>
+              <div class="rate view">
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#" class="active">♥</a>
+                <a href="#">♥</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Page navigation" class="col-12">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><span class="page-link" href="#">Trước</span></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-xs-12">
+          <div class="branch-logo-footer">
+            <img src="assets/img/logo-white.png" alt="">
+            <span>Không gian đi bộ hoàn kiếm</span>
+          </div>
+          <div class="adress-footer">
+            <div>Đơn vị quản lý: Ban quản lý khu vực phố đi bộ Hà Nội</div>
+            <div>Địa chỉ: Tầng 7, Tòa nhà Plaza, 12A Đinh Tiên Hoàng, Hoàn Kiếm, Hà Nội</div>
+            <div>Tel: (04) 3-212-3232 ext. 2947       <span class="ml-5">Fax: (04) 3-212-3232 ext. 2947</span></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-12">
+          <ul class="social-links">
+            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <small>Bản quyền &copy; 2017. Tất cả quyền được bảo lưu.</small>
+    </div>
+  </footer>
+
+  <script src="assets/resources/popper.min.js"></script>
+  <script src="assets/resources/bootstrap-4.0.0-beta/dist/js/bootstrap.min.js"></script>
+  <script src="assets/resources/slick/slick.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB18ocC5Ydyc4k9wPHcqWu0XL-ToifH20"></script>
+  <script src="assets/js/main-dist.js"></script>
+</body>
+</html>
