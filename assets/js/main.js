@@ -51,6 +51,10 @@
       }
     },
     navConfig: function() {
+      if($('.navbar').hasClass('forced-mini-nav')) {
+        return;
+      }
+      
       var height = $(window).scrollTop();
 
       if(height  > $('header').height() + $('.navbar').height()) {

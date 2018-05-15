@@ -328,6 +328,11 @@ header {
 
             .lores( {}
             );
+          
+            &.forced-mini-nav {
+              position: relative;
+              border-top: solid 1px @light-gray-color;
+            }
         }
 
         .navbar-toggler {
@@ -1260,4 +1265,27 @@ section {
   }
 }
 
-
+/* form section */
+.form-sect {
+  form {
+    max-width: 600px;
+    border: solid 1px @light-gray-color;
+    margin: 50px auto; 
+    padding: 35px 100px;
+    
+    a {
+      span {
+        text-decoration: underline;
+      }
+      
+      i {
+        opacity: .6;
+      }
+    }
+    
+    .mobile({
+      margin: 30px 15px;
+      padding: 15px 30px;
+    });
+  }
+}
