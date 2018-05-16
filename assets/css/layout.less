@@ -1369,7 +1369,21 @@ section {
 }
 
 
-
-
+/* comment */
+.comments {
+  max-height: 480px;
+  overflow: auto;
+  
+  .comment {
+    .fa {
+      vertical-align: 4px;
+      margin-right: 3px;
+    }
+    
+    &:nth-child(odd) {
+      background: fade(@light-gray-color, 20%);
+    }
+  }
+}
 
 

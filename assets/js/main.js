@@ -10,6 +10,7 @@
         layoutRender.navConfig();
         layoutRender.paralaxRender();
       });
+      layoutRender.rateInit();
     },
     slideRender: function() {
       if($('.services').length) {
@@ -78,6 +79,29 @@
           });
         }
       }
+    },
+    rateInit: function() {
+      if(!$('.rate:not(.view)').length) {
+        return;
+      }
+      
+      var rateControl = $('.rate:not(.view)');
+      rateControl.find('a').click(function(e) {
+        e.preventDefault();
+        $(this).parent().addClass('choiced');
+        $(this).parent().find('a').removeClass('active');
+        $(this).prevAll().addClass('active');
+        $(this).addClass('active');
+        $(this).parent().parent().find('.rate-value').val($(this).parent().find('.active').length);
+      });
+      rateControl.find('a').mouseenter(function() {
+        if($(this).parent().hasClass('choiced')) {
+          return;
+        }
+        $(this).parent().find('a').removeClass('active');
+        $(this).prevAll().addClass('active');
+        $(this).addClass('active');
+      });
     }
   };
   
