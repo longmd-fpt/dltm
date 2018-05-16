@@ -1305,36 +1305,34 @@ section {
       .card-title {
         font-size: 1.1em;
       }
-      
-      .rate {
-        width: 165px;
-        height: 16px;
-        font-size: 0;
-        vertical-align: top;
-        background: url(../img/img-star-uncheck.png) repeat-x left center;
-        background-size: auto 16px;
-        
-        a {
-          display: inline-block;
-          width: 33px;
-          height: 16px;
-          background: no-repeat center;
-          background-size: auto 16px;
-          
-          &.active {
-            background-image: url(../img/img-star-checked.png);
-          }
-          
-        }
-        
-        &.view {
-          .no-click();
-        }
-      }
     }
   }
 }
+.rate {
+  width: 165px;
+  height: 16px;
+  font-size: 0;
+  vertical-align: top;
+  background: url(../img/img-star-uncheck.png) repeat-x left center;
+  background-size: auto 16px;
 
+  a {
+    display: inline-block;
+    width: 33px;
+    height: 16px;
+    background: no-repeat center;
+    background-size: auto 16px;
+
+    &.active {
+      background-image: url(../img/img-star-checked.png);
+    }
+
+  }
+
+  &.view {
+    .no-click();
+  }
+}
 
 
 
