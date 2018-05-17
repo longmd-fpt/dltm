@@ -866,12 +866,21 @@ section {
                         color: @orangle-color;
                         font-weight: 600;
                     }
+                    &.price {
+                      * {
+                        vertical-align: -5px;
+                      }
+                    }
                 }
 
                 .mobile( {
                     padding: 15px;
                 }
                 );
+            }
+          
+            &.ticket {
+                padding-bottom: 45px;
             }
 
             .mobile( {
@@ -884,6 +893,9 @@ section {
             );
 
             .btn-block {
+                position: absolute;
+                width: ~'calc(100% - 30px)';
+                bottom: 0;
                 font-size: 1.15em;
                 font-weight: 100;
                 border-radius: 0;
