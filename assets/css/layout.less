@@ -2,7 +2,7 @@
 
 html,
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: @main-size;
     font-weight: 300;
     line-height: 1.3;
@@ -48,6 +48,7 @@ a {
     &:hover {
         color: @hover-color;
     }
+
 }
 
 ul {
@@ -244,7 +245,7 @@ header {
     .navbar {
         position: absolute;
         width: 100%;
-        background: transparent !important;
+        background: #1b1e2191!important;
         padding: 0;
         z-index: 100;
         .transition(all .6s);
@@ -288,6 +289,9 @@ header {
                     color: @hover-color;
                     border-color: @hover-color;
                 }
+                &:focus {
+                    color: #FFF;
+                }
 
                 .lores( {
                     padding: 8px 12px;
@@ -304,9 +308,17 @@ header {
                     );
                 }
             }
+
             .dropdown-menu {
-                background: fade(white, 70%);
+                background: fade(#FFF, 60%);
+                &.show{
+                    a{
+                        padding: 10px;
+                        text-transform: uppercase;
+                    }
+                }
             }
+            
 
             .mobile( {
                 .dropdown-menu {
@@ -338,6 +350,10 @@ header {
                 color: @main-color;
                 font-size: 0.89em;
                 font-weight: 400;
+                &:focus {
+                    color: @focus-color;
+                }
+
             }
 
             .lores( {}
@@ -645,7 +661,7 @@ section {
 
 .img-banner {
     position: relative;
-    height: 330px;
+    height: 400px;
     .fullBackground();
     background-image: url(../img/bg-banner-01.jpg);
     background-size: auto 100%;
@@ -871,8 +887,8 @@ section {
                     & + p {
                         margin-top: 0.5em;
                     }
-                    span{
-                        font-size:1.25em;
+                    span {
+                        font-size: 1.25em;
                         color: @orangle-color;
                         font-weight: 600;
                     }
@@ -1384,6 +1400,10 @@ section {
         .no-click();
     }
 }
+.rate-text {
+  font-size: 2em;
+  vertical-align: 0;
+}
 
 
 /* Modal */
@@ -1429,13 +1449,28 @@ section {
     overflow: auto;
 
     .comment {
+        border-width: 0px;
+        
         .fa {
             vertical-align: 4px;
             margin-right: 3px;
         }
 
-        &:nth-child(odd) {
-            background: fade(@light-gray-color, 20%);
+        & + .comment {
+            border-top-width: 1px;
+        }
+      
+        .card-body {
+            padding-left: 0;
+            padding-right: 0;
+        }
+      
+        img {
+            width: 50px;
+            
+            .mobile({
+              width: 40px;
+            });
         }
     }
 }
